@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Archivo Condensed';
+  src: url('/src//assets/Archivo_Condensed-Thin.ttf') format('truetype');
+  /* Add additional font weights if available */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo Condensed';
+  src:
+    url('/src//assets/archivo-condensed-bold.ttf') format('truetype');
+  /* Add additional font weights if available */
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Archivo Condensed';
+  src:
+    url('/src//assets/archivo-condensed-extrabold.ttf') format('truetype');
+  /* Add additional font weights if available */
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  background-color: #fefaf1;
+  font-family: "Poppins", sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.swiper-button-prev {
+  left: 0px;
+  /* Adjust as needed */
+}
+
+.swiper-button-next {
+  right: 0px;
+  /* Adjust as needed */
+}
+
+.apartmentsSwiper {
+  border-radius: 8px;
+}
+
+
+.archivo {
+  font-family: 'Archivo Condensed', sans-serif;
+  line-height: normal;
+}
+
+.fragment {
+  font-family: "Fragment Mono", monospace;
+
+  font-style: normal;
+}
+
+.clip {
+  clip-path: polygon(0 0, 100% 0, 100% 91%, 50% 100%, 50% 100%, 0 91%);
+
+}
+
+.titleWithLine::after {
+  content: "";
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  height: 2px;
+  background-color: #003551;
+  /* or your desired color */
+}
+
+.custom-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Define fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Define fade-out animation */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* Apply fade-in and fade-out animations */
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
