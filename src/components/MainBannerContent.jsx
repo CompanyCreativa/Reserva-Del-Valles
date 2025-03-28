@@ -22,11 +22,11 @@ function MainBannerContent() {
                   esperabas.
                 </p>
                 <p className="mt-1 text-almendra-blue text-[29px] md:text-[35px] bigPortatil:text-[48px] font-light archivo  hidden md:block">
-                  <span className="font-bold">Desde $281.900.000*</span>
+                  <span className="font-bold">Desde $298.700.000*</span>
                 </p>
                 <p className="flex flex-col justify-center items-center text-almendra-blue text-[20px] font-light archivo -mt-2  md:hidden">
                   <span className="font-bold text-[22px]">
-                    Desde $281.900.000*
+                    Desde $298.700.000*
                   </span>
                 </p>
               </div>

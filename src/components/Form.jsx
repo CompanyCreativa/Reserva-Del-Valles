@@ -47,7 +47,7 @@ function Form() {
       </h1>
       <form
         action=""
-        className="flex flex-col gap-5 items-start "
+        className="flex flex-col gap-5 items-start"
         ref={form}
         onSubmit={sendEmail}
       >
