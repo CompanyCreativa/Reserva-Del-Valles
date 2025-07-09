@@ -22,11 +22,11 @@ function MainBannerContent() {
                   esperabas.
                 </p>
                 <p className="mt-1 text-almendra-blue text-[29px] md:text-[35px] bigPortatil:text-[48px] font-light archivo  hidden md:block">
-                  <span className="font-bold">Desde $298.700.000*</span>
+                  <span className="font-bold">Desde $300.900.000*</span>
                 </p>
                 <p className="flex flex-col justify-center items-center text-almendra-blue text-[20px] font-light archivo -mt-2  md:hidden">
                   <span className="font-bold text-[22px]">
-                    Desde $298.700.000*
+                    Desde $300.900.000*
                   </span>
                 </p>
               </div>
@@ -41,7 +41,7 @@ function MainBannerContent() {
             <h1 className="text-[24px] md:text-[32px] bigPortatil:text-[42px] font-medium text-cream mb-4 text-center">
               Pregunta por nuestro <br className="block lg:hidden" />{" "}
               lanzamiento
-              <span className="font-bold text-dark-cream"> de torre 2</span>
+              <span className="font-bold text-dark-cream"> de torre 4</span>
             </h1>
             <a
               href="https://api.whatsapp.com/send?phone=573175388121"
