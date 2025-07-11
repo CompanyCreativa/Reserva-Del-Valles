@@ -42,8 +42,8 @@ function Form() {
 
   return (
     <div className="flex flex-col gap-5 md:justify-between md:gap-0 h-full ">
-      <h1 className="text-almendra-blue text-[32px] md:text-5xl archivo font-semibold">
-        ¡Quiero más infomación!
+      <h1 className="text-almendra-blue text-[30px] md:text-4xl archivo font-semibold">
+        ¡Quiero más información!
       </h1>
       <form
         action=""

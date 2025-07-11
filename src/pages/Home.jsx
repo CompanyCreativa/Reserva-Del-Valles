@@ -43,7 +43,6 @@ function Home() {
         closeModal={closeModal}
         scrollToSection={scrollToSection}
       />
-      <WppButton />
       <section className="h-[95vh] md:h-screen w-full relative bg-mobile-banner md:bg-main-banner bg-top bg-cover clip flex flex-col items-center">
         <MainBannerContent
           openModal={openModal}
@@ -106,7 +105,7 @@ function Home() {
         <Container>
           <div className="flex flex-col justify-center items-center gap-20 w-full">
             <h1 className="text-almendra-blue text-[32px] md:text-[42px]  2xl:text-6xl archivo font-semibold tracking-widest titleWithLine">
-              Ubicacion
+              Ubicación
             </h1>
             <div className="w-full flex flex-col justify-center items-center">
               <div className="w-full bg-wppButton flex justify-center items-center p-4  rounded-t-lg">
