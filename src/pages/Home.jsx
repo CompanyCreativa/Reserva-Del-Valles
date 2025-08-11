@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 
 import ApartmentsSwiper from "../components/ApartmentsSwiper";
@@ -11,7 +10,6 @@ import Form from "../components/Form";
 import WazeIcon from "../components/WazeIcon";
 import Header from "../components/Header";
 import WppIcon from "../components/WppIcon";
-import WppButton from "../components/WppButton";
 import Modal from "../components/Modal";
 
 import planoImg from "../assets/Plano.png";

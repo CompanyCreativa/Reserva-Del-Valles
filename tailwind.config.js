@@ -15,6 +15,7 @@ export default {
       backgroundColor: {
         wppButton: "#14A77A",
         blueAlmendra: "#003551",
+        ppalColor: "#F8E8D3",
       },
       textColor: {
         "opaque-green": "#14A77A",
@@ -22,10 +23,14 @@ export default {
         "almendra-blue": "#003551",
         cream: "#F4EFE5",
         "dark-cream": "#E7C19A",
+        "color-regular": "#3C4351",
       },
       colors: {
         cream: "#F4EFE5",
         abstractCream: "#fefaf1",
+        "color-regular": "#3C4351",
+        "accent-color-hover": "#A63823",
+        ppalColor: "#F8E8D3",
       },
       screens: {
         bigPortatil: "1650px",

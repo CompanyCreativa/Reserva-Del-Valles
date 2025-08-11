@@ -3,28 +3,41 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Archivo Condensed';
-  src: url('/src//assets/Archivo_Condensed-Thin.ttf') format('truetype');
+  font-family: "Archivo Condensed";
+  src: url("/src//assets/Archivo_Condensed-Thin.ttf") format("truetype");
   /* Add additional font weights if available */
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Archivo Condensed';
-  src:
-    url('/src//assets/archivo-condensed-bold.ttf') format('truetype');
+  font-family: "Archivo Condensed";
+  src: url("/src//assets/archivo-condensed-bold.ttf") format("truetype");
   /* Add additional font weights if available */
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Archivo Condensed';
-  src:
-    url('/src//assets/archivo-condensed-extrabold.ttf') format('truetype');
+  font-family: "Archivo Condensed";
+  src: url("/src//assets/archivo-condensed-extrabold.ttf") format("truetype");
   /* Add additional font weights if available */
   font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BanglaMN";
+  src: url("/src//assets/Bangla_MN1.ttf") format("truetype");
+  /* Add additional font weights if available */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BanglaMN";
+  src: url("/src//assets/Bangla_MN_Bold.ttf") format("truetype");
+  font-weight: 700; /* Simular bold */
   font-style: normal;
 }
 
@@ -33,13 +46,13 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -69,7 +82,6 @@ input[type=number] {
 .swiper {
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .swiper-container {
@@ -97,21 +109,29 @@ input[type=number] {
   border-radius: 8px;
 }
 
-
 .archivo {
-  font-family: 'Archivo Condensed', sans-serif;
+  font-family: "Archivo Condensed", sans-serif;
+  line-height: normal;
+}
+
+.bangla {
+  font-family: "BanglaMN", sans-serif;
+  line-height: normal;
+}
+
+.banglaBold {
+  font-family: "BanglaMN", sans-serif;
+  font-weight: 700;
   line-height: normal;
 }
 
 .fragment {
   font-family: "Fragment Mono", monospace;
-
   font-style: normal;
 }
 
 .clip {
   clip-path: polygon(0 0, 100% 0, 100% 91%, 50% 100%, 50% 100%, 0 91%);
-
 }
 
 .titleWithLine::after {
