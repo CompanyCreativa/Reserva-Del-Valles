@@ -1,10 +1,8 @@
 import { useState } from "react";
 
-import ApartmentsSwiper from "../components/ApartmentsSwiper";
 import Container from "../components/Container";
 import Section from "../components/Section";
 import MainBannerContent from "../components/MainBannerContent";
-import ZonesSwiper from "../components/ZonesSwiper";
 import GoogleMapIframe from "../components/GoogleMapIframe";
 import Form from "../components/Form";
 import WazeIcon from "../components/WazeIcon";
@@ -12,14 +10,16 @@ import Header from "../components/Header";
 import WppIcon from "../components/WppIcon";
 import Modal from "../components/Modal";
 
-import planoImg from "../assets/Plano.png";
-import priceImg from "../assets/price.png";
-import placesIcon from "../assets/placesIcons.png";
+import planoImg from "../assets/planes.webp";
+import priceImg from "../assets/price.webp";
+import placesIcon from "../assets/placesIcons.webp";
 import wazeImg from "../assets/wazeIcon.png";
-import closeToImg from "../assets/closeTo.png";
+import map from "../assets/map.webp";
 import brandsImg from "../assets/brands.png";
 import closeToMobile from "../assets/closeToMobile.png";
 import mapMobile from "../assets/mapMobile.png";
+import ScrollSection from "../components/ScrollSection";
+import ScrollSectionPlaces from "../components/ScrollSectionPlaces";
 
 function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,14 +34,14 @@ function Home() {
     }
   };
   return (
-    <div className="bg-section-container bg-repeat bg-contain">
+    <div className="">
       <Header openModal={openModal} scrollToSection={scrollToSection} />
       <Modal
         isOpen={isOpen}
         closeModal={closeModal}
         scrollToSection={scrollToSection}
       />
-      <section className="h-[95vh] md:h-screen w-full relative bg-mobile-banner md:bg-main-banner bg-top bg-cover clip flex flex-col items-center">
+      <section className="h-[95vh] md:h-screen w-full bg-mobile-banner md:bg-main-banner flex flex-col bg-no-repeat  bg-cover bg-center items-center z-20 mb-0">
         <MainBannerContent
           openModal={openModal}
           closeModal={closeModal}
@@ -50,29 +50,50 @@ function Home() {
       </section>
       <Section>
         <Container>
-          <div className="flex flex-col justify-center items-center">
-            <h1 className="text-almendra-blue text-[32px] md:text-[42px]  2xl:text-6xl archivo font-semibold tracking-widest titleWithLine">
-              Apartamentos
-            </h1>
-            <p className="text-[22px] md:text-[32px] archivo text-almendra-blue mt-5 mb-10 relative">
-              Rodeados de tranquilidad desde{" "}
-              <span className="font-semibold">
-                61,3 m<span className="text-[16px] absolute">2</span>
-              </span>
-            </p>
+          <div className="flex justify-between gap-16">
+            <div className="w-full">
+              <h2 className="text-scndColor text-[32px] md:text-[42px]  xl:text-4xl 2xl:text-5xl bangla">
+                Una nueva oportunidad <br />
+                para <span className="font-semibold">vivir bonito</span>
+              </h2>
+              <p className="text-[22px] xl:text-2xl 2xl:text-3xl text-almendra-blue mt-5 mb-10 relative">
+                Después del éxito de las etapas anteriores.
+              </p>
+              <div className="flex xl:w-[90%] 2xl:w-[95%] items-center text-color-regular bg-ppalColor py-5 xl:py-7 xl:px-10 2xl:py-10 2xl:px-14 rounded-tr-[60px] rounded-bl-[60px] shadow-xl">
+                <div className="flex flex-col border-r-2 pr-10 border-color-regular gap-5">
+                  <span className="xl:text-2xl 2xl:text-3xl">
+                    Apartamentos desde
+                  </span>
+                  <span className="xl:text-6xl 2xl:text-8xl bangla">
+                    65,48<span className="xl:text-3xl 2xl:text-5xl">m²</span>
+                  </span>
+                </div>
+                <div className="flex flex-col ml-10 text-center justify-center mt-5 2xl:gap-5">
+                  <span className="xl:text-6xl 2xl:text-8xl bangla">
+                    2<span className="xl:text-4xl 2xl:text-6xl">y</span>3
+                  </span>
+                  <span className="xl:text-2xl 2xl:text-3xl 2xl:-mt-10">
+                    Alcobas
+                  </span>
+                </div>
+              </div>
+            </div>
+            <ScrollSection />
           </div>
-          <ApartmentsSwiper />
         </Container>
       </Section>
       <Section>
         <Container>
-          <div className="flex flex-col justify-center items-center gap-8 md:gap-16">
-            <h1 className="text-almendra-blue text-[32px]  2xl:text-6xl archivo tracking-widest text-center ">
-              Espacios diseñados para
-              <span className="font-semibold"> tu familia</span>
-            </h1>
-            <div className="flex flex-col justify-center items-center gap-10">
-              <img src={planoImg} alt="" className="w-auto max-w-[78%]" />
+          <div className="flex flex-col justify-center items-start gap-4">
+            <div className="flex w-full items-end">
+              <h1 className="text-[#003551] text-[32px] xl:text-4xl  2xl:text-5xl bangla text-start ">
+                Espacios&nbsp;diseñados <br /> para
+                <span className="font-semibold"> tu familia</span>
+              </h1>
+              <div className="w-full h-1 rounded-full mb-5 bg-accent-color"></div>
+            </div>
+            <div className="flex self-center flex-col justify-center items-center gap-4 bg-ppalColor w-full rounded-3xl p-8">
+              <img src={planoImg} alt="" className="w-auto max-w-[70%]" />
               <img
                 src={priceImg}
                 alt=""
@@ -86,14 +107,18 @@ function Home() {
       <Section>
         <Container>
           <div className="flex flex-col justify-center items-center gap-12 md:gap-24 w-full">
-            <h1 className="text-almendra-blue text-[32px] md:text-[42px]  2xl:text-6xl archivo font-semibold tracking-widest titleWithLine">
-              Zonas comunes
-            </h1>
+            <div className="flex w-full items-end">
+              <h2 className="text-[#003551] text-[32px] xl:text-4xl  2xl:text-5xl bangla  text-start ">
+                Zonas&nbsp;para&nbsp;descansar,&nbsp;moverte, <br /> compartir y
+                <span className="font-semibold"> sentirte bien.</span>
+              </h2>
+              <div className="w-full h-1 rounded-full mb-5 bg-accent-color"></div>
+            </div>
             <div className="w-full h-full flex flex-col md:grid md:grid-cols-2 gap-10 test">
-              <div className="w-full h-full">
+              <ScrollSectionPlaces />
+              <div className="w-full h-full flex justify-center items-center">
                 <img src={placesIcon} alt="" />
               </div>
-              <ZonesSwiper />
             </div>
           </div>
         </Container>
@@ -102,18 +127,15 @@ function Home() {
       <Section>
         <Container>
           <div className="flex flex-col justify-center items-center gap-20 w-full">
-            <h1 className="text-almendra-blue text-[32px] md:text-[42px]  2xl:text-6xl archivo font-semibold tracking-widest titleWithLine">
-              Ubicación
-            </h1>
             <div className="w-full flex flex-col justify-center items-center">
-              <div className="w-full bg-wppButton flex justify-center items-center p-4  rounded-t-lg">
-                <h1 className="text-white text-[26px] md:text-[32px]  archivo  tracking-widest text-center">
-                  A un paso de todo, incluso de
-                  <span className="font-semibold"> la naturaleza </span>
-                </h1>
+              <div className="w-full bg-ppalColor flex justify-center items-center p-4 rounded-t-3xl">
+                <h2 className="text-white text-[26px] md:text-[32px] 2xl:text-5xl text-[#003551] tracking-wider text-center bangla pt-5">
+                  Aquí todo se siente más
+                  <span className="font-semibold"> cercano.</span>
+                </h2>
               </div>
               <GoogleMapIframe />
-              <div className="w-full bg-blueAlmendra flex justify-center items-center py-4 rounded-b-lg">
+              <div className="w-full bg-[#003551] flex justify-center items-center py-4 rounded-b-3xl">
                 <a href="https://waze.com/ul/hd34678z36" target="_blank">
                   <img
                     src={wazeImg}
@@ -129,22 +151,27 @@ function Home() {
       </Section>
       <Section>
         <Container>
-          <div className="w-full flex flex-col gap-16 md:flex-row md:gap-0 justify-center items-center ">
-            <img
-              src={closeToImg}
-              alt=""
-              className="hidden md:block w-auto max-w-[85%]"
-            />
-            <img
-              src={mapMobile}
-              alt=""
-              className="block md:hidden w-auto max-w-[100%]"
-            />
-            <img
-              src={closeToMobile}
-              alt=""
-              className="block md:hidden w-auto max-w-[100%]"
-            />
+          <div className="w-full flex flex-col gap-16 md:gap-0 justify-center items-center ">
+            <div className="flex w-full items-end">
+              <h2 className="text-[#981E29] text-[32px] xl:text-4xl  2xl:text-5xl bangla  text-start ">
+                Vive&nbsp;en&nbsp;el,&nbsp;mejor&nbsp;sector <br /> de
+                <span className="font-semibold"> La Ceja.</span>
+              </h2>
+              <div className="w-full h-1 rounded-full mb-5 bg-accent-color"></div>
+            </div>
+            <div className="w-full flex justify-center items-center bg-ppalColor p-16 mt-10 rounded-3xl">
+              <img src={map} alt="" className="" />
+              <img
+                src={mapMobile}
+                alt=""
+                className="block md:hidden w-auto max-w-[100%]"
+              />
+              <img
+                src={closeToMobile}
+                alt=""
+                className="block md:hidden w-auto max-w-[100%]"
+              />
+            </div>
           </div>
         </Container>
       </Section>
@@ -152,8 +179,9 @@ function Home() {
       <Section>
         <Container>
           <div className="flex flex-col justify-center items-center gap-20 w-full pb-16 md:pb-32">
-            <h1 className="text-almendra-blue text-[32px] md:text-[42px]  2xl:text-6xl archivo font-semibold tracking-widest titleWithLine hidden md:block">
-              Contacto
+            <h1 className="text-accent-color-hover text-[32px] md:text-[42px]  2xl:text-5xl bangla tracking-wider hidden md:block">
+              <span className="font-semibold">¿Te interesa?</span> Déjanos tus
+              datos
             </h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-24 lg:gap-32 max-w-5xl w-90% h-full ">
               <div className="flex flex-col items-center justify-between ">
@@ -205,7 +233,7 @@ function Home() {
           </div>
         </Container>
       </Section>
-      <section className="bg-white flex justify-center items-center w-full py-5">
+      <section className="bg-ppalColor flex justify-center items-center w-full py-5">
         <Container>
           <div className="flex justify-center items-center w-full">
             <img src={brandsImg} alt="" />
