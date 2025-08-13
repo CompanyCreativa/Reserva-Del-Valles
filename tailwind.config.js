@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "main-banner": "url('/src/assets/ppalBanner.webp')",
-        "mobile-banner": "url('/src/assets/mobile-banner.png')",
+        "mobile-banner": "url('/src/assets/mobile-banner.webp')",
         "section-container": "url('/src/assets/bgAbstract.png')",
         "overlay-top":
           "linear-gradient(0deg, rgba(244, 244, 244, 0) 0%, #0c130ed1 100%);",

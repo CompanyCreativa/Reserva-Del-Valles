@@ -1,5 +1,3 @@
-import React from "react";
-
 function MenuIcon() {
   return (
     <svg
@@ -11,21 +9,21 @@ function MenuIcon() {
     >
       <path
         d="M6.16666 7.70825L30.8333 7.70825"
-        stroke="#F4EFE5"
+        stroke="#626262"
         strokeWidth="2.3125"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M6.16666 18.5L30.8333 18.5"
-        stroke="#F4EFE5"
+        stroke="#626262"
         strokeWidth="2.3125"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M6.16666 29.2917L30.8333 29.2918"
-        stroke="#F4EFE5"
+        stroke="#626262"
         strokeWidth="2.3125"
         strokeLinecap="round"
         strokeLinejoin="round"

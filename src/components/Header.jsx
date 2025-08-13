@@ -4,7 +4,7 @@ import decoration from "../assets/decoration.png";
 
 function Header({ openModal, scrollToSection }) {
   return (
-    <div className="w-full fixed  z-40 py-5 2xl:pt-5 px-4 md:px-12 xl:px-32 flex justify-between items-center bg-ppalColor bangla text-color-regular text-sm 2xl:text-lg">
+    <div className="w-full fixed  z-10 py-5 2xl:pt-5 px-4 md:px-12 xl:px-32 flex justify-between items-center bg-ppalColor bangla text-color-regular text-sm 2xl:text-lg">
       <img
         src={decoration}
         className="absolute w-[120px] md:w-auto md:-top-20 left-0"
@@ -73,7 +73,7 @@ function Header({ openModal, scrollToSection }) {
           <MenuIcon />
         </button>
       </div>
-      <button className="pt-4 border-2 border-color-regular px-10 py-2 rounded-full hover:bg-accent-color-hover hover:text-ppalColor hover:border-accent-color-hover transition ease-in-out duration-200 shadow-md hidden lg:block">
+      <button className="pt-4 border-2 border-color-regular px-10 py-2 rounded-full hover:bg-accent-color-hover hover:text-ppalColor hover:border-accent-color-hover transition ease-in-out duration-200 shadow-md hidden lg:block" onClick={() => scrollToSection("contact")}>
         Contacto
       </button>
     </div>

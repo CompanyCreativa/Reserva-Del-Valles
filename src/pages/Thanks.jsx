@@ -1,4 +1,3 @@
-import React from "react";
 import BlueLogo from "../components/BlueLogo";
 import { Link } from "react-router-dom";
 

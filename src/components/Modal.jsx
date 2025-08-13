@@ -1,34 +1,53 @@
 import React, { useState } from "react";
 import CloseIcon from "./CloseIcon";
 import BlueLogo from "./BlueLogo";
+import logoReserva from "../assets/logo-reserva.png";
+import { AnimatePresence, motion } from "motion/react";
 
 function Modal({ isOpen, closeModal, scrollToSection }) {
   return (
-    <>
+    <AnimatePresence>
       {isOpen && (
-        <div className="w-full">
-          <div className="fixed inset-0 z-20 bg-black opacity-70 h-full w-full"></div>
-          <div className=" fixed top-0 z-50 w-full ">
-            <div className="bg-abstractCream w-full py-12 px-10 flex justify-between gap-5  ">
-              <div>
-                <BlueLogo />
+        <div className="w-full   bg-ppalColor">
+          <motion.div
+            className="fixed top-0 z-50 w-full "
+            initial={{ y: -1000 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            exit={{ isOpen: false, y: -1000 }}
+          >
+            <div className="bg-ppalColor h-[100vh] w-full py-12 px-10 flex flex-col gap-5  ">
+              <div className="flex items-start justify-between">
+                <img src={logoReserva} className="w-32" />
+                <button onClick={closeModal}>
+                  <CloseIcon />
+                </button>
               </div>
-              <div className="flex flex-col gap-5 -mt-3">
+              <div className="flex items-start flex-col gap-8 -mt-3 flex-1 justify-center bangla text-accent-color-hover text-2xl mb-20">
                 <button
                   onClick={() => {
                     scrollToSection("apartments");
                     closeModal();
                   }}
-                  className=" text-base text-almendra-blue font-semibold "
+                  className="  "
                 >
                   Apartamentos
+                </button>
+                <button
+                  onClick={() => {
+                    scrollToSection("plans");
+                    closeModal();
+                  }}
+                  className=" "
+                >
+                  Planos
                 </button>
                 <button
                   onClick={() => {
                     scrollToSection("zonas");
                     closeModal();
                   }}
-                  className=" text-base text-almendra-blue font-semibold "
+                  className="  "
                 >
                   Zonas comunes
                 </button>
@@ -37,7 +56,7 @@ function Modal({ isOpen, closeModal, scrollToSection }) {
                     scrollToSection("ubicacion");
                     closeModal();
                   }}
-                  className=" text-base text-almendra-blue font-semibold "
+                  className=" "
                 >
                   Ubicación
                 </button>
@@ -46,21 +65,17 @@ function Modal({ isOpen, closeModal, scrollToSection }) {
                     scrollToSection("contact-mobile");
                     closeModal();
                   }}
-                  className=" text-base text-almendra-blue font-semibold "
+                  className=" "
                 >
                   Contacto
                 </button>
               </div>
             </div>
-            <div className=" w-full flex items-end justify-end pt-5 pr-5">
-              <button onClick={closeModal}>
-                <CloseIcon />
-              </button>
-            </div>
-          </div>
+            <div className="w-full flex items-end justify-end pt-5 pr-5"></div>
+          </motion.div>
         </div>
       )}
-    </>
+    </AnimatePresence>
   );
 }
 

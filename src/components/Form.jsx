@@ -42,8 +42,8 @@ function Form() {
 
   return (
     <div className="flex flex-col gap-5 md:justify-between md:gap-0 h-full ">
-      <h1 className="text-almendra-blue text-[30px] md:text-4xl archivo font-semibold">
-        ¡Quiero más información!
+      <h1 className="text-[#003551] text-[30px] mb-5 md:text-4xl font-semibold">
+        ¡Quiero&nbsp;más&nbsp;información!
       </h1>
       <form
         action=""
@@ -91,7 +91,7 @@ function Form() {
           <a
             href="https://www.valorizaconstructora.com/wp-content/uploads/politica-datos-personales.pdf"
             target="_blank"
-            className="text-almendra-blue font-semibold"
+            className="text-[#003851] font-semibold"
           >
             políticas de privacidad
           </a>
@@ -101,7 +101,7 @@ function Form() {
           name="submitForm"
           id="submitForm"
           value="Enviar"
-          className="bg-[#14A77A] text-white rounded-lg px-9 py-3 text-lg cursor-pointer"
+          className="bg-[#003851] text-white rounded-lg px-9 py-3 text-lg cursor-pointer"
         />
       </form>
     </div>
