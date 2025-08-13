@@ -5,10 +5,10 @@ import decoration from "../assets/decoration.png";
 function Header({ openModal, scrollToSection }) {
   return (
     <div className="w-full fixed  z-40 py-5 2xl:pt-5 px-4 md:px-12 xl:px-32 flex justify-between items-center bg-ppalColor bangla text-color-regular text-sm 2xl:text-lg">
-      <img src={decoration} className="absolute w-[120px] md:-top-20 left-0" />
+      <img src={decoration} className="absolute w-[120px] md:w-auto md:-top-20 left-0" />
       <img src={logoReserva} className="ml-[37%] md:ml-40" />
       <div className="flex gap-5 lg:gap-36 ">
-        <div className="flex gap-[52px]  mt-[5px] -ml-16 ">
+        <div className="flex gap-[52px] mt-[5px] -ml-16 ">
           <button
             onClick={() => scrollToSection("apartments")}
             className="hidden lg:inline-block relative overflow-hidden h-[1.5em] group"
