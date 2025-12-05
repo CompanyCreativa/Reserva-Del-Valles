@@ -1,0 +1,12 @@
+# Evitar problemas con MultiViews
+Options -MultiViews
+
+# Activar el motor de reescritura
+RewriteEngine On
+
+# Si el archivo o directorio solicitado NO existe...
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# ...redirigir todo a index.html
+RewriteRule ^ index.html [QSA,L]

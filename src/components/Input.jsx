@@ -9,7 +9,7 @@ function Input({ label, type, name, value, onChange }) {
         name={name}
         value={value}
         onChange={onChange}
-        className="rounded-lg bg-[#72B4A0]/30 w-full py-2 px-2 box-border"
+        className="rounded-lg bg-[#003851]/30 w-full py-2 px-2 box-border"
         required
       />
     </div>
