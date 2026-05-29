@@ -1,6 +1,9 @@
 import MenuIcon from "./MenuIcon";
 import logoReserva from "../assets/logo-reserva.png";
 import decoration from "../assets/decoration.png";
+import instagramSvg from "../assets/instagram-logo.svg";
+import InstagramLogo from "./Icons/InstagramLogo";
+import { Link } from "react-router-dom";
 
 function Header({ openModal, scrollToSection }) {
   return (
@@ -73,9 +76,17 @@ function Header({ openModal, scrollToSection }) {
           <MenuIcon />
         </button>
       </div>
-      <button className="pt-4 border-2 border-color-regular px-10 py-2 rounded-full hover:bg-accent-color-hover hover:text-ppalColor hover:border-accent-color-hover transition ease-in-out duration-200 shadow-md hidden lg:block" onClick={() => scrollToSection("contact")}>
-        Contacto
-      </button>
+      <div className="flex justify-center items-center gap-10">
+        <Link to="https://www.instagram.com/reservadelvalles/" target="_blank">
+          <InstagramLogo className="w-10" />
+        </Link>
+        <button
+          className="pt-4 border-2 border-color-regular px-10 py-2 rounded-full hover:bg-accent-color-hover hover:text-ppalColor hover:border-accent-color-hover transition ease-in-out duration-200 shadow-md hidden lg:block"
+          onClick={() => scrollToSection("contact")}
+        >
+          Contacto
+        </button>
+      </div>
     </div>
   );
 }

@@ -18,7 +18,7 @@ function MainBannerContent() {
               Último proyecto Del Vallés
             </p>
             <p className="text-color-regular text-3xl md:text-4xl font-light bangla md:mt-6">
-              Desde<span className="font-bold"> $347.000.000</span>
+              Desde<span className="font-bold"> $368.710.000</span>
             </p>
           </div>
         </div>
